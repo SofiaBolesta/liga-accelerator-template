@@ -985,25 +985,21 @@ button,
 
 .about-company__wrapper {
   width: 1220px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-  grid-template-columns: auto auto;
-  -ms-grid-rows: 45px auto auto auto auto;
-  grid-template-rows: 45px auto auto auto auto;
-  justify-items: start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 0 100px;
   margin: 0 auto;
 }
 
+.about-company__content {
+  display: block;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
 .about-company__title {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  -ms-grid-row: 1;
-  grid-row: 1;
   margin: 0;
   font-weight: 400;
   font-size: 36px;
@@ -1012,9 +1008,18 @@ button,
 }
 
 .about-company__picture {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  grid-row: 1/-1;
+  min-width: 150px;
+  max-height: 320px;
+  margin: 0;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.about-company__image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .about-company__picture--hidden-mobile {
@@ -1022,48 +1027,28 @@ button,
 }
 
 .about-company__text {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  -ms-grid-row: 2;
-  grid-row: 2;
-  margin: -8px 0 0 0;
   font-family: "PT_Mono", "Arial", sans-serif;
   color: #041827;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  margin: 10px 0 10px 0;
 }
 
-.about-company__text--two {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  -ms-grid-row: 3;
-  grid-row: 3;
-  margin: -36px 0 0 0;
-}
-
-.about-company__text--three {
-  display: inline;
-  -ms-grid-column: 2;
-  grid-column: 2;
-  -ms-grid-row: 4;
-  grid-row: 4;
-  margin: -56px 0 0 0;
+.about-company__content-button {
+  width: 100%;
+  margin: 50px 0 0 2px;
 }
 
 .about-company__button {
   min-width: 180px;
   -ms-grid-column: 2;
   grid-column: 2;
-  -ms-grid-row: 5;
-  grid-row: 5;
-  padding: 14px 8px;
+  padding: 14px 50px;
   border: 1px solid #00b2ff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 3px;
-  margin: -8px 0 0 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -1078,6 +1063,10 @@ button,
 .about-company__button:active {
   -webkit-box-shadow: inset 0 0 6px 1px #00b2ff;
   box-shadow: inset 0 0 6px 1px #00b2ff;
+}
+
+.about-company__text--hidden-mobile {
+  display: inline;
 }
 
 .goods {
@@ -1266,7 +1255,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 48px;
   color: #ffffff;
   background-color: #019bdf;
   border-radius: 3px;
@@ -1286,7 +1275,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 48px;
   color: #ffffff;
 }
 
@@ -1294,7 +1283,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 48px;
   color: #ffffff;
 }
 
@@ -1302,7 +1291,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 48px;
   color: #ffffff;
 }
 
@@ -1310,7 +1299,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 48px;
   color: #ffffff;
 }
 
@@ -1318,7 +1307,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 48px;
   color: #ffffff;
 }
 
@@ -1331,7 +1320,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 155px;
   color: #ffffff;
   background-color: #019bdf;
   border: 2px solid #019bdf;
@@ -1354,7 +1343,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 155px;
   color: #ffffff;
 }
 
@@ -1362,7 +1351,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 155px;
   color: #ffffff;
 }
 
@@ -1370,7 +1359,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 155px;
   color: #ffffff;
 }
 
@@ -1378,7 +1367,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 155px;
   color: #ffffff;
 }
 
@@ -1386,7 +1375,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 155px;
   color: #ffffff;
 }
 
@@ -1842,17 +1831,13 @@ button,
 .modal {
   position: fixed;
   top: 0;
-  right: 17px;
+  right: 0;
   bottom: 0;
   left: 0;
   z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: rgba(0, 0, 0, 0.8);
@@ -1982,7 +1967,7 @@ button,
 .modal__input {
   font-family: "PT_Mono", "Arial", sans-serif;
   width: 100%;
-  padding: 9px 15px 14px 15px;
+  padding: 11px 15px 14px 11px;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
@@ -2921,15 +2906,7 @@ button,
   .about-company__wrapper {
     width: 100%;
     padding: 0 140px;
-    -ms-grid-columns: auto auto;
-    grid-template-columns: auto auto;
-    -ms-grid-rows: auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto;
-    gap: 35px 50px;
-  }
-
-  .about-company__text--three {
-    margin: -32px 0 0;
+    gap: 0 50px;
   }
 
   .goods__wrapper {
@@ -3157,40 +3134,17 @@ button,
   .about-company__wrapper {
     width: 100%;
     padding: 0 50px;
-    -ms-grid-columns: auto auto;
-    grid-template-columns: auto auto;
-    gap: 25px 25px;
+    gap: 0 25px;
   }
 
   .about-company__title {
     font-size: 36px;
     line-height: 51px;
-    margin: -48px 0 0 0;
-  }
-
-  .about-company__picture {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    grid-row: 1/4;
   }
 
   .about-company__text {
-    padding-bottom: 25px;
-    margin: -100px 0 0 0;
-  }
-
-  .about-company__text--two {
-    margin: -188px 0 0 0;
-    padding-bottom: 1px;
-  }
-
-  .about-company__text--three {
-    margin: -171px 0 0 0;
+    margin: 0;
     padding: 0;
-  }
-
-  .about-company__button {
-    margin: -37px 0 0 0;
   }
 
   .goods {
@@ -3515,23 +3469,13 @@ button,
   .about-company__wrapper {
     width: 100%;
     padding: 0 25px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-grid-columns: auto;
-    grid-template-columns: auto;
     gap: 0 15px;
   }
 
   .about-company__title {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 1;
-    grid-row: 1;
     font-weight: 400;
     font-size: 28px;
     line-height: 140.62%;
-    margin: 0;
   }
 
   .about-company__picture--hidden-mobile {
@@ -3539,37 +3483,20 @@ button,
   }
 
   .about-company__text {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 2;
-    grid-row: 2;
     font-size: 14px;
     line-height: 134.4%;
-    margin: 12px 0 0 0;
+    margin: 0;
     padding: 0;
-  }
-
-  .about-company__text--two {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 3;
-    grid-row: 3;
-    padding: 0 0 13px 0;
-    margin: 21px 0 0 0;
-  }
-
-  .about-company__text--three {
-    display: none;
   }
 
   .about-company__button {
     min-width: 160px;
     margin-top: 1px;
     padding: 8px 15px;
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 4;
-    grid-row: 4;
+  }
+
+  .about-company__text--hidden-mobile {
+    display: none;
   }
 
   .goods {
