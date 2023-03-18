@@ -57,8 +57,11 @@
       <div class="container promo__wrapper">
         <h2 class="promo__title">Печатные платы</h2>
         <p class="promo__text">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-        <a class="button promo__button" href="#">Получить бесплатную консультацию</a>
-        <a class="button promo__button promo__button--hidden" href="#">бесплатная консультация</a>
+        <a class="button promo__button" href="#">
+          <span class="promo__button--hidden-mobile">Получить бесплатную консультацию</span>
+          <span class="promo__button--hidden-tablet">бесплатная консультация</span>
+        </a>
+        <!--<a class="button promo__button promo__button&#45;&#45;hidden" href="#"></a>-->
       </div>
       <picture class="promo__shadow">
         <source type="image/webp" media="(max-width: 766px)" srcset="img/main/promo/background-image_mobile@1x.webp, img/main/promo/background-image_mobile@2x.webp 2x">
@@ -74,44 +77,32 @@
         <h2 class="visually-hidden">Преимущества:</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--current">
-            <h3 class="advantages__title advantages__title--current">Оперативные сроки </h3>
-            <svg class="advantages__icon advantages__icon--current advantages__icon--hidden-tablet" aria-hidden="true" focusable="false" width="30" height="30">
-              <use xlink:href="img/sprite/sprite.svg#icon-stopwatch-mobile"></use>
-            </svg>
-              <svg class="advantages__icon advantages__icon--current advantages__icon--hidden-mobile" aria-hidden="true" focusable="false" width="35" height="35">
+            <h3 class="advantages__title--current">Оперативные сроки</h3>
+              <svg class="advantages__icon advantages__icon--current advantages__icon--mobile" aria-hidden="true" focusable="false" width="35" height="35">
                 <use xlink:href="img/sprite/sprite.svg#icon-stopwatch"></use>
               </svg>
-            <p class="advantages__subtitle">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title">Крупные поставщики</h3>
-            <svg class="advantages__icon advantages__icon--hidden-tablet" aria-hidden="true" focusable="false" width="30" height="30">
-              <use xlink:href="img/sprite/sprite.svg#icon-hired-mobile"></use>
-            </svg>
+            <h3>Крупные поставщики</h3>
             <svg class="advantages__icon advantages__icon--hidden-mobile" aria-hidden="true" focusable="false" width="35" height="35">
               <use xlink:href="img/sprite/sprite.svg#icon-hired"></use>
             </svg>
-            <p class="advantages__subtitle">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title">Полная конфиденциальность</h3>
-            <svg class="advantages__icon advantages__icon--hidden-tablet" aria-hidden="true" focusable="false" width="30" height="30">
-              <use xlink:href="img/sprite/sprite.svg#icon-detective-mobile"></use>
-            </svg>
+            <h3>Полная конфиденциальность</h3>
             <svg class="advantages__icon advantages__icon--hidden-mobile" aria-hidden="true" focusable="false" width="35" height="35">
               <use xlink:href="img/sprite/sprite.svg#icon-detective"></use>
             </svg>
-            <p class="advantages__subtitle">По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
+            <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title">Персонализация стоимости</h3>
-            <svg class="advantages__icon advantages__icon--hidden-tablet" aria-hidden="true" focusable="false" width="30" height="30">
-              <use xlink:href="img/sprite/sprite.svg#icon-tag-mobile"></use>
-            </svg>
+            <h3>Персонализация стоимости</h3>
             <svg class="advantages__icon advantages__icon--hidden-mobile" aria-hidden="true" focusable="false" width="35" height="35">
               <use xlink:href="img/sprite/sprite.svg#icon-tag"></use>
             </svg>
-            <p class="advantages__subtitle">Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.</p>
+            <p>Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.</p>
           </li>
         </ul>
       </div>
@@ -203,14 +194,14 @@
           <p class="form__subtitle">Мы проконсультируем Вас бесплатно</p>
           <form class="form__question" action="https://echo.htmlacademy.ru/" method="post">
             <label class="form__label">
-              <input type="text" class="form__input" name="name" placeholder="Имя" required>
+              <input type="text" name="name" placeholder="Имя" required>
             </label>
             <label class="form__label">
-              <input type="tel" class="form__input phone-mask" name="phone" placeholder="Телефон" required>
+              <input type="tel" class="phone-mask" name="phone" placeholder="Телефон" required>
             </label>
             <textarea class="form__textarea" placeholder="Ваш вопрос" name="message" required></textarea>
             <label class="form__label form__label--checkbox">
-              <input class="visually-hidden form__input-checkbox" type="checkbox" name="agree" required>
+              <input class="visually-hidden" type="checkbox" name="agree" required>
               <span class="form__style"></span>
               <span class="form__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
             </label>

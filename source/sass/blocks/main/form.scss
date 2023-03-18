@@ -18,7 +18,7 @@
   padding: 157px 0 250px 0;
   display: grid;
   grid-template-columns: 510px 585px;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(auto-fit, minmax(303px, auto));
   gap: 0 115px;
 
   @include vp-1279 {
@@ -26,7 +26,7 @@
     padding: 157px 140px 250px 140px;
     box-sizing: border-box;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(auto-fit, minmax(303px, auto));
     gap: 0 35px;
   }
 
@@ -131,9 +131,8 @@
   }
 }
 
-.form__input {
-  min-width: 276px;
-  padding: 15px 15px 15px 15px;
+.form__label input {
+  padding: 0 15px 0 15px;
   box-sizing: border-box;
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
@@ -161,35 +160,23 @@
     color: #ffffff;
   }
 
-  @include vp-1279 {
-    width: 100%;
-  }
-
-  @include vp-1023 {
-    width: 100%;
-  }
-
   @include vp-767 {
-    width: 100%;
     min-width: 0;
   }
 }
 
 .form__textarea {
-  width: 100%;
+  grid-column: 1/-1;
   height: 155px;
   padding: 23px 15px 15px 15px;
   box-sizing: border-box;
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 155px;
   color: #ffffff;
   background-color: #019bdf;
   border: 2px solid #019bdf;
   border-radius: 3px;
-  grid-column: 1/-1;
-  grid-row: 2;
 
   &:hover {
     border: 2px solid rgba(#000000, 0.5);
@@ -204,21 +191,15 @@
     font-family: "PT_Mono", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 155px;
+    line-height: 15px;
     color: #ffffff;
   }
 
-  @include vp-1279 {
-    width: 100%;
-  }
-
   @include vp-1023 {
-    width: 100%;
     padding: 32px 15px 15px 15px;
   }
 
   @include vp-767 {
-    width: 100%;
     padding-top: 22px;
     height: 179px;
   }
@@ -241,7 +222,7 @@
   }
 }
 
-.form__input-checkbox {
+.form__label--checkbox input {
   padding-left: 20px;
 }
 
@@ -255,21 +236,21 @@
   margin: 0 0 0 -20px;
 }
 
-.form__input-checkbox:checked + .form__style::before {
+.form__label--checkbox input:checked + .form__style::before {
   content: "";
   position: absolute;
-  top: 3.5px;
-  left: 2.5px;
+  top: 3px;
+  left: 2px;
   width: 10px;
   height: 10px;
   background: url("../img/svg/check_mark.svg") no-repeat;
 }
 
-.form__input-checkbox:hover + .form__style {
+.form__label--checkbox input:hover + .form__style {
   border: 2px solid rgba(#000000, 0.5);
 }
 
-.form__input-checkbox:focus + .form__style {
+.form__label--checkbox input:focus + .form__style {
   border: 2px solid rgba(#000000, 0.8);
 }
 

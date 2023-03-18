@@ -799,6 +799,14 @@ button,
   max-width: 610px;
 }
 
+.promo__button--hidden-mobile {
+  display: block;
+}
+
+.promo__button--hidden-tablet {
+  display: none;
+}
+
 .promo__button {
   display: inline-block;
   min-width: 410px;
@@ -821,10 +829,6 @@ button,
 .promo__button:active {
   -webkit-box-shadow: inset 0 0 8px 3px #f2f5f7;
   box-shadow: inset 0 0 8px 3px #f2f5f7;
-}
-
-.promo__button--hidden {
-  display: none;
 }
 
 .promo__shadow {
@@ -863,8 +867,8 @@ button,
   display: grid;
   -ms-grid-columns: 595px 595px;
   grid-template-columns: 595px 595px;
-  -ms-grid-rows: (303px)[2];
-  grid-template-rows: repeat(2, 303px);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
   gap: 30px 32px;
   margin: 0;
   padding: 0;
@@ -872,12 +876,16 @@ button,
 }
 
 .advantages__item {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 35px auto auto;
-  grid-template-rows: 35px auto auto;
-  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 18px;
+  min-height: 340px;
+  padding: 40px;
   border-top: 1px solid #ebebeb;
   border-right: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
@@ -899,7 +907,11 @@ button,
   color: #f2f5f7;
 }
 
-.advantages__title {
+.advantages__item--current .advantages__title--current {
+  color: #f2f5f7;
+}
+
+.advantages__item h3 {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
@@ -907,11 +919,8 @@ button,
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
-  margin: 1px 0 0 0;
-}
-
-.advantages__title--current {
-  color: #f2f5f7;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages__icon {
@@ -921,19 +930,11 @@ button,
   order: 1;
 }
 
-.advantages__icon--hidden-tablet {
-  display: none;
-}
-
-.advantages__icon--hidden-mobile {
-  display: block;
-}
-
 .advantages__icon--current {
   fill: #f2f5f7;
 }
 
-.advantages__subtitle {
+.advantages__item p {
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
   order: 3;
@@ -943,38 +944,7 @@ button,
   font-size: 16px;
   line-height: 135%;
   margin: 0;
-}
-
-.advantages__item:first-child .advantages__title {
-  margin-top: 5px;
-}
-
-.advantages__item:first-child .advantages__subtitle {
-  margin-top: -55px;
-}
-
-.advantages__item:nth-child(2) .advantages__title {
-  margin-top: 7px;
-}
-
-.advantages__item:nth-child(2) .advantages__subtitle {
-  margin-top: -32px;
-}
-
-.advantages__item:nth-child(3) .advantages__title {
-  margin-top: 2px;
-}
-
-.advantages__item:nth-child(3) .advantages__subtitle {
-  margin-top: -62px;
-}
-
-.advantages__item:nth-child(4) .advantages__title {
-  margin-top: 2px;
-}
-
-.advantages__item:nth-child(4) .advantages__subtitle {
-  margin-top: -56px;
+  padding: 0;
 }
 
 .about-company {
@@ -1192,8 +1162,7 @@ button,
   display: grid;
   -ms-grid-columns: 510px 585px;
   grid-template-columns: 510px 585px;
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(auto-fit, minmax(303px, auto));
   gap: 0 115px;
 }
 
@@ -1247,9 +1216,8 @@ button,
   margin-left: 4px;
 }
 
-.form__input {
-  min-width: 276px;
-  padding: 15px 15px 15px 15px;
+.form__label input {
+  padding: 0 15px 0 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "PT_Mono", "Arial", sans-serif;
@@ -1262,16 +1230,16 @@ button,
   border: 2px solid #019bdf;
 }
 
-.form__input:hover {
+.form__label input:hover {
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-.form__input:focus,
-.form__input:active {
+.form__label input:focus,
+.form__label input:active {
   border: 2px solid rgba(0, 0, 0, 0.8);
 }
 
-.form__input::-webkit-input-placeholder {
+.form__label input::-webkit-input-placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1279,7 +1247,7 @@ button,
   color: #ffffff;
 }
 
-.form__input::-moz-placeholder {
+.form__label input::-moz-placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1287,7 +1255,7 @@ button,
   color: #ffffff;
 }
 
-.form__input:-ms-input-placeholder {
+.form__label input:-ms-input-placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1295,7 +1263,7 @@ button,
   color: #ffffff;
 }
 
-.form__input::-ms-input-placeholder {
+.form__label input::-ms-input-placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1303,7 +1271,7 @@ button,
   color: #ffffff;
 }
 
-.form__input::placeholder {
+.form__label input::placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1312,7 +1280,7 @@ button,
 }
 
 .form__textarea {
-  width: 100%;
+  grid-column: 1/-1;
   height: 155px;
   padding: 23px 15px 15px 15px;
   -webkit-box-sizing: border-box;
@@ -1320,14 +1288,10 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 155px;
   color: #ffffff;
   background-color: #019bdf;
   border: 2px solid #019bdf;
   border-radius: 3px;
-  grid-column: 1/-1;
-  -ms-grid-row: 2;
-  grid-row: 2;
 }
 
 .form__textarea:hover {
@@ -1343,7 +1307,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 155px;
+  line-height: 15px;
   color: #ffffff;
 }
 
@@ -1351,7 +1315,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 155px;
+  line-height: 15px;
   color: #ffffff;
 }
 
@@ -1359,7 +1323,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 155px;
+  line-height: 15px;
   color: #ffffff;
 }
 
@@ -1367,7 +1331,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 155px;
+  line-height: 15px;
   color: #ffffff;
 }
 
@@ -1375,7 +1339,7 @@ button,
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 155px;
+  line-height: 15px;
   color: #ffffff;
 }
 
@@ -1393,7 +1357,7 @@ button,
   margin: 28px 0 0 29px;
 }
 
-.form__input-checkbox {
+.form__label--checkbox input {
   padding-left: 20px;
 }
 
@@ -1408,21 +1372,21 @@ button,
   margin: 0 0 0 -20px;
 }
 
-.form__input-checkbox:checked + .form__style::before {
+.form__label--checkbox input:checked + .form__style::before {
   content: "";
   position: absolute;
-  top: 3.5px;
-  left: 2.5px;
+  top: 3px;
+  left: 2px;
   width: 10px;
   height: 10px;
   background: url("../img/svg/check_mark.svg") no-repeat;
 }
 
-.form__input-checkbox:hover + .form__style {
+.form__label--checkbox input:hover + .form__style {
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-.form__input-checkbox:focus + .form__style {
+.form__label--checkbox input:focus + .form__style {
   border: 2px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -2868,39 +2832,7 @@ button,
   }
 
   .advantages__item {
-    gap: 0;
-  }
-
-  .advantages__item:first-child .advantages__title {
-    margin-top: 0;
-  }
-
-  .advantages__item:first-child .advantages__subtitle {
-    margin-top: 0;
-  }
-
-  .advantages__item:nth-child(2) .advantages__title {
-    margin-top: 13px;
-  }
-
-  .advantages__item:nth-child(2) .advantages__subtitle {
-    margin-top: 0;
-  }
-
-  .advantages__item:nth-child(3) .advantages__title {
-    margin-top: 13px;
-  }
-
-  .advantages__item:nth-child(3) .advantages__subtitle {
-    margin-top: 0;
-  }
-
-  .advantages__item:nth-child(4) .advantages__title {
-    margin-top: 13px;
-  }
-
-  .advantages__item:nth-child(4) .advantages__subtitle {
-    margin-top: 0;
+    gap: 18px;
   }
 
   .about-company__wrapper {
@@ -2931,8 +2863,7 @@ button,
     box-sizing: border-box;
     -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(auto-fit, minmax(303px, auto));
     gap: 0 35px;
   }
 
@@ -2949,14 +2880,6 @@ button,
     grid-template-rows: 50px 155px 50px;
     gap: 20px 26px;
     margin-left: 4px;
-  }
-
-  .form__input {
-    width: 100%;
-  }
-
-  .form__textarea {
-    width: 100%;
   }
 
   .social {
@@ -3086,44 +3009,14 @@ button,
 
   .advantages__list {
     grid-template-columns: repeat(auto-fit, minmax(320px, auto));
-    -ms-grid-rows: (360px)[2];
-    grid-template-rows: repeat(2, 360px);
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
     gap: 30px 30px;
   }
 
-  .advantages__item {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .advantages__subtitle {
+  .advantages__item p {
     font-size: 16px;
     line-height: 135%;
-  }
-
-  .advantages__item:first-child .advantages__subtitle {
-    margin-top: -17px;
-  }
-
-  .advantages__item:nth-child(2) .advantages__subtitle {
-    margin-top: 9px;
-  }
-
-  .advantages__item:nth-child(3) .advantages__title {
-    margin-top: -40px;
-  }
-
-  .advantages__item:nth-child(3) .advantages__subtitle {
-    margin-top: -139px;
-  }
-
-  .advantages__item:nth-child(4) .advantages__title {
-    margin-top: -19px;
-  }
-
-  .advantages__item:nth-child(4) .advantages__subtitle {
-    margin-top: -58px;
   }
 
   .about-company {
@@ -3214,12 +3107,7 @@ button,
     margin: 0;
   }
 
-  .form__input {
-    width: 100%;
-  }
-
   .form__textarea {
-    width: 100%;
     padding: 32px 15px 15px 15px;
   }
 
@@ -3371,16 +3259,19 @@ button,
     margin: 0 0 46px 0;
   }
 
-  .promo__button {
+  .promo__button--hidden-mobile {
     display: none;
+  }
+
+  .promo__button--hidden-tablet {
+    display: inline-block;
+  }
+
+  .promo__button {
+    min-width: 270px;
     font-size: 14px;
     margin: 0;
     padding: 10px 30px;
-  }
-
-  .promo__button--hidden {
-    display: inline-block;
-    min-width: 270px;
   }
 
   .promo__picture {
@@ -3400,65 +3291,24 @@ button,
   }
 
   .advantages__list {
-    -ms-grid-rows: (340px)[2] (325px)[2];
-    grid-template-rows: repeat(2, 340px) repeat(2, 325px);
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
   }
 
   .advantages__item {
-    gap: 0;
+    gap: 18px;
     padding: 25px;
   }
 
-  .advantages__title {
+  .advantages__item h3 {
     font-size: 20px;
     line-height: 140.62%;
   }
 
-  .advantages__icon--hidden-tablet {
-    display: block;
-  }
-
-  .advantages__icon--hidden-mobile {
-    display: none;
-  }
-
-  .advantages__subtitle {
+  .advantages__item p {
     font-size: 14px;
-  }
-
-  .advantages__item:first-child .advantages__title {
-    margin-top: -41px;
-  }
-
-  .advantages__item:first-child .advantages__subtitle {
-    margin-top: -96px;
-  }
-
-  .advantages__item:nth-child(2) .advantages__title {
-    margin-top: -16px;
-  }
-
-  .advantages__item:nth-child(2) .advantages__subtitle {
-    margin-top: -53px;
-  }
-
-  .advantages__item:nth-child(3) .advantages__title {
-    margin-top: -35px;
-  }
-
-  .advantages__item:nth-child(3) .advantages__subtitle {
-    margin-top: -134px;
-  }
-
-  .advantages__item:nth-child(4) .advantages__title {
-    margin-top: -18px;
-  }
-
-  .advantages__item:nth-child(4) .advantages__subtitle {
-    margin-top: -60px;
-    width: 199px;
   }
 
   .about-company {
@@ -3575,13 +3425,11 @@ button,
     flex-direction: column;
   }
 
-  .form__input {
-    width: 100%;
+  .form__label input {
     min-width: 0;
   }
 
   .form__textarea {
-    width: 100%;
     padding-top: 22px;
     height: 179px;
   }

@@ -76,6 +76,22 @@
   }
 }
 
+.promo__button--hidden-mobile {
+  display: block;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.promo__button--hidden-tablet {
+  display: none;
+
+  @include vp-767 {
+    display: inline-block;
+  }
+}
+
 .promo__button {
   display: inline-block;
   min-width: 410px;
@@ -107,19 +123,10 @@
   }
 
   @include vp-767 {
-    display: none;
+    min-width: 270px;
     font-size: 14px;
     margin: 0;
     padding: 10px 30px;
-  }
-}
-
-.promo__button--hidden {
-  display: none;
-
-  @include vp-767 {
-    display: inline-block;
-    min-width: 270px;
   }
 }
 
