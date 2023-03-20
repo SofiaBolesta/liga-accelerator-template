@@ -799,11 +799,11 @@ button,
   max-width: 610px;
 }
 
-.promo__button--hidden-mobile {
+.promo__text-button--hidden-mobile {
   display: block;
 }
 
-.promo__button--hidden-tablet {
+.promo__text-button--hidden-tablet {
   display: none;
 }
 
@@ -969,14 +969,6 @@ button,
   order: 2;
 }
 
-.about-company__title {
-  margin: 0;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
-  color: #041827;
-}
-
 .about-company__picture {
   min-width: 150px;
   max-height: 320px;
@@ -996,7 +988,15 @@ button,
   display: block;
 }
 
-.about-company__text {
+.content h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #041827;
+}
+
+.content p {
   font-family: "PT_Mono", "Arial", sans-serif;
   color: #041827;
   font-weight: 400;
@@ -1005,12 +1005,12 @@ button,
   margin: 10px 0 10px 0;
 }
 
-.about-company__content-button {
+.content__button {
   width: 100%;
   margin: 50px 0 0 2px;
 }
 
-.about-company__button {
+.content__button a {
   min-width: 180px;
   -ms-grid-column: 2;
   grid-column: 2;
@@ -1028,14 +1028,14 @@ button,
   color: #00b2ff;
 }
 
-.about-company__button:hover,
-.about-company__button:focus,
-.about-company__button:active {
+.content__button a:hover,
+.content__button a:focus,
+.content__button a:active {
   -webkit-box-shadow: inset 0 0 6px 1px #00b2ff;
   box-shadow: inset 0 0 6px 1px #00b2ff;
 }
 
-.about-company__text--hidden-mobile {
+.content__text--hidden-mobile {
   display: inline;
 }
 
@@ -1279,7 +1279,7 @@ button,
   color: #ffffff;
 }
 
-.form__textarea {
+.form__question textarea {
   grid-column: 1/-1;
   height: 155px;
   padding: 23px 15px 15px 15px;
@@ -1294,16 +1294,16 @@ button,
   border-radius: 3px;
 }
 
-.form__textarea:hover {
+.form__question textarea:hover {
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-.form__textarea:focus,
-.form__textarea:active {
+.form__question textarea:focus,
+.form__question textarea:active {
   border: 2px solid rgba(0, 0, 0, 0.8);
 }
 
-.form__textarea::-webkit-input-placeholder {
+.form__question textarea::-webkit-input-placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1311,7 +1311,7 @@ button,
   color: #ffffff;
 }
 
-.form__textarea::-moz-placeholder {
+.form__question textarea::-moz-placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1319,7 +1319,7 @@ button,
   color: #ffffff;
 }
 
-.form__textarea:-ms-input-placeholder {
+.form__question textarea:-ms-input-placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1327,7 +1327,7 @@ button,
   color: #ffffff;
 }
 
-.form__textarea::-ms-input-placeholder {
+.form__question textarea::-ms-input-placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1335,7 +1335,7 @@ button,
   color: #ffffff;
 }
 
-.form__textarea::placeholder {
+.form__question textarea::placeholder {
   font-family: "PT_Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -3030,12 +3030,12 @@ button,
     gap: 0 25px;
   }
 
-  .about-company__title {
+  .content h2 {
     font-size: 36px;
     line-height: 51px;
   }
 
-  .about-company__text {
+  .content p {
     margin: 0;
     padding: 0;
   }
@@ -3107,7 +3107,7 @@ button,
     margin: 0;
   }
 
-  .form__textarea {
+  .form__question textarea {
     padding: 32px 15px 15px 15px;
   }
 
@@ -3259,11 +3259,11 @@ button,
     margin: 0 0 46px 0;
   }
 
-  .promo__button--hidden-mobile {
+  .promo__text-button--hidden-mobile {
     display: none;
   }
 
-  .promo__button--hidden-tablet {
+  .promo__text-button--hidden-tablet {
     display: inline-block;
   }
 
@@ -3322,30 +3322,30 @@ button,
     gap: 0 15px;
   }
 
-  .about-company__title {
+  .about-company__picture--hidden-mobile {
+    display: none;
+  }
+
+  .content h2 {
     font-weight: 400;
     font-size: 28px;
     line-height: 140.62%;
   }
 
-  .about-company__picture--hidden-mobile {
-    display: none;
-  }
-
-  .about-company__text {
+  .content p {
     font-size: 14px;
     line-height: 134.4%;
     margin: 0;
     padding: 0;
   }
 
-  .about-company__button {
+  .content__button a {
     min-width: 160px;
     margin-top: 1px;
     padding: 8px 15px;
   }
 
-  .about-company__text--hidden-mobile {
+  .content__text--hidden-mobile {
     display: none;
   }
 
@@ -3429,7 +3429,7 @@ button,
     min-width: 0;
   }
 
-  .form__textarea {
+  .form__question textarea {
     padding-top: 22px;
     height: 179px;
   }

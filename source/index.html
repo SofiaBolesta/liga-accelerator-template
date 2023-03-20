@@ -58,10 +58,9 @@
         <h2 class="promo__title">Печатные платы</h2>
         <p class="promo__text">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
         <a class="button promo__button" href="#">
-          <span class="promo__button--hidden-mobile">Получить бесплатную консультацию</span>
-          <span class="promo__button--hidden-tablet">бесплатная консультация</span>
+          <span class="promo__text-button promo__text-button--hidden-mobile">Получить бесплатную консультацию</span>
+          <span class="promo__text-button promo__text-button--hidden-tablet">бесплатная консультация</span>
         </a>
-        <!--<a class="button promo__button promo__button&#45;&#45;hidden" href="#"></a>-->
       </div>
       <picture class="promo__shadow">
         <source type="image/webp" media="(max-width: 766px)" srcset="img/main/promo/background-image_mobile@1x.webp, img/main/promo/background-image_mobile@2x.webp 2x">
@@ -77,7 +76,7 @@
         <h2 class="visually-hidden">Преимущества:</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--current">
-            <h3 class="advantages__title--current">Оперативные сроки</h3>
+            <h3 class="advantages__title advantages__title--current">Оперативные сроки</h3>
               <svg class="advantages__icon advantages__icon--current advantages__icon--mobile" aria-hidden="true" focusable="false" width="35" height="35">
                 <use xlink:href="img/sprite/sprite.svg#icon-stopwatch"></use>
               </svg>
@@ -109,20 +108,18 @@
     </section>
     <section class="about-company">
       <div class="about-company__wrapper">
-        <div class="about-company__content">
-          <h2 class="about-company__title">О компании</h2>
-          <p class="about-company__text">
-            Мы&nbsp;поставляем электронные комплектующие,
+        <div class="about-company__content content">
+          <h2>О компании</h2>
+          <p>Мы&nbsp;поставляем электронные комплектующие,
             производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года.
             Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
             Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.</p>
-          <p class="about-company__text about-company__text--hidden-mobile">
+          <p class="content__text content__text--hidden-mobile">
             Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
-            Среди наших клиентов крупнейшие Производители светотехники России.
-          </p>
-          <div class="about-company__content-button">
-            <a class="button about-company__button" href="#">Подробнее</a>
+            Среди наших клиентов крупнейшие Производители светотехники России.</p>
+          <div class="content__button">
+            <a href="#">Подробнее</a>
           </div>
         </div>
         <picture class="about-company__picture about-company__picture--hidden-mobile">
@@ -199,7 +196,7 @@
             <label class="form__label">
               <input type="tel" class="phone-mask" name="phone" placeholder="Телефон" required>
             </label>
-            <textarea class="form__textarea" placeholder="Ваш вопрос" name="message" required></textarea>
+            <textarea placeholder="Ваш вопрос" name="message" required></textarea>
             <label class="form__label form__label--checkbox">
               <input class="visually-hidden" type="checkbox" name="agree" required>
               <span class="form__style"></span>

@@ -1,0 +1,81 @@
+.content h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #041827;
+
+  @include vp-1023 {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  @include vp-767 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+}
+
+.content p {
+  font-family: "PT_Mono", "Arial", sans-serif;
+  color: #041827;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 10px 0 10px 0;
+
+  @include vp-1023 {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 134.4%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+.content__button {
+  width: 100%;
+  margin: 50px 0 0 2px;
+}
+
+.content__button a {
+  min-width: 180px;
+  grid-column: 2;
+  padding: 14px 50px;
+  border: 1px solid #00b2ff;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00b2ff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: inset 0 0 6px 1px #00b2ff;
+  }
+
+  @include vp-767 {
+    min-width: 160px;
+    margin-top: 1px;
+    padding: 8px 15px;
+  }
+}
+
+.content__text--hidden-mobile {
+  display: inline;
+
+  @include vp-767 {
+    display: none;
+  }
+}
