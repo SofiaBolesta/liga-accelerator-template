@@ -8,12 +8,14 @@
   @include vp-1023 {
     font-size: 36px;
     line-height: 51px;
+    margin-bottom: 10px;
   }
 
   @include vp-767 {
     font-weight: 400;
     font-size: 28px;
     line-height: 140.62%;
+    margin-bottom: 10px;
   }
 }
 
@@ -40,16 +42,27 @@
 
 
 .content__button {
+  display: inline-flex;
+  justify-content: flex-start;
   width: 100%;
-  margin: 50px 0 0 2px;
+  margin: 48px 0 0 2px;
+
+  @include vp-1023 {
+    margin: 26px 0 0 0;
+  }
+
+  @include vp-767 {
+    margin: 34px 0 0 0;
+  }
 }
 
 .content__button a {
-  min-width: 180px;
+  display: block;
+  min-width: 70px;
   grid-column: 2;
   padding: 14px 50px;
   border: 1px solid #00b2ff;
-  box-sizing: border-box;
+  box-sizing: content-box;
   border-radius: 3px;
   font-weight: 700;
   font-size: 14px;
@@ -65,9 +78,12 @@
     box-shadow: inset 0 0 6px 1px #00b2ff;
   }
 
+  @include vp-1023 {
+    min-width: 0;
+  }
+
   @include vp-767 {
-    min-width: 160px;
-    margin-top: 1px;
+    min-width: 125px;
     padding: 8px 15px;
   }
 }

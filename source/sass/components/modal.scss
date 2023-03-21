@@ -139,9 +139,16 @@
   margin: 0 0 40px 0;
 }
 
-.modal__input {
-  font-family: "PT_Mono", "Arial", sans-serif;
+.modal__label--name input {
   width: 100%;
+}
+
+.modal__label--tel input {
+  width: 100%;
+}
+
+.modal__label input {
+  font-family: "PT_Mono", "Arial", sans-serif;
   padding: 11px 15px 14px 11px;
   font-size: 16px;
   line-height: 22px;
@@ -168,7 +175,7 @@
   }
 }
 
-.modal__textarea {
+.modal__form textarea {
   width: 100%;
   height: 155px;
   padding: 23px 15px 15px 15px;

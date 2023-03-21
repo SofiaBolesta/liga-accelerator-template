@@ -13,11 +13,11 @@
 }
 
 .form__wrapper {
-  width: 1220px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 157px 0 250px 0;
   display: grid;
-  grid-template-columns: 510px 585px;
+  grid-template-columns: 515px 585px;
   grid-template-rows: repeat(auto-fit, minmax(303px, auto));
   gap: 0 115px;
 
@@ -39,7 +39,7 @@
 
   @include vp-767 {
     width: 100%;
-    padding: 35px 25px 85px 25px;
+    padding: 35px 25px 95px 25px;
     box-sizing: border-box;
   }
 }
@@ -105,6 +105,7 @@
 
 
 .form__question {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: auto auto auto;
@@ -129,6 +130,22 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+.form__label {
+  width: 100%;
+}
+
+.form__label--name input {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.form__label--tel input {
+  width: 100%;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .form__label input {
@@ -167,6 +184,7 @@
 
 .form__question textarea {
   grid-column: 1/-1;
+  grid-row: 2;
   height: 155px;
   padding: 23px 15px 15px 15px;
   box-sizing: border-box;
@@ -207,7 +225,7 @@
 
 .form__label--checkbox {
   grid-column: 2;
-  grid-row: 3;
+  grid-row: -1;
   display: flex;
   align-items: center;
   margin: 28px 0 0 29px;
@@ -271,7 +289,7 @@
 .form__container-button {
   width: 100%;
   grid-column: 1;
-  grid-row: 3;
+  grid-row: -1;
   margin-top: 14px;
 
   @include vp-1023 {

@@ -190,10 +190,10 @@
           <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
           <p class="form__subtitle">Мы проконсультируем Вас бесплатно</p>
           <form class="form__question" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="form__label">
+            <label class="form__label form__label--name">
               <input type="text" name="name" placeholder="Имя" required>
             </label>
-            <label class="form__label">
+            <label class="form__label form__label--tel">
               <input type="tel" class="phone-mask" name="phone" placeholder="Телефон" required>
             </label>
             <textarea placeholder="Ваш вопрос" name="message" required></textarea>
@@ -389,13 +389,13 @@
         </svg>
       </button>
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="modal__label">
-          <input type="text" class="modal__input" name="name" placeholder="Имя" required>
+        <label class="modal__label modal__label--name">
+          <input type="text"  name="name" placeholder="Имя" required>
         </label>
-        <label class="modal__label">
-          <input type="tel" class="modal__input phone-mask" name="phone" placeholder="Телефон" required>
+        <label class="modal__label modal__label--tel">
+          <input type="tel" class="phone-mask" name="phone" placeholder="Телефон" required>
         </label>
-        <textarea class="modal__textarea" placeholder="Ваш вопрос" name="message" required></textarea>
+        <textarea placeholder="Ваш вопрос" name="message" required></textarea>
         <label class="modal__label modal__label--checkbox">
           <input class="visually-hidden modal__input-checkbox" type="checkbox" name="agree" required>
           <span class="modal__style"></span>
