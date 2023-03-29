@@ -43,9 +43,12 @@
 
 .content__button {
   display: inline-flex;
+  border: none;
+  background-color: transparent;
   justify-content: flex-start;
   width: 100%;
   margin: 48px 0 0 2px;
+  order: 2;
 
   @include vp-1023 {
     margin: 26px 0 0 0;
@@ -56,7 +59,7 @@
   }
 }
 
-.content__button a {
+.content__text-button {
   display: block;
   min-width: 70px;
   grid-column: 2;
@@ -88,10 +91,28 @@
   }
 }
 
+.content__accord {
+  grid-column: 2;
+}
+
+.content__element-accord {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__text-accord {
+  order: 1;
+}
+
 .content__text--hidden-mobile {
   display: inline;
 
   @include vp-767 {
     display: none;
   }
+}
+
+.content__text-button-open--hidden,
+.content__text-button-close--hidden {
+  display: none;
 }

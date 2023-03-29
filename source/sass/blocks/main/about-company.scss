@@ -28,8 +28,10 @@
 
 .about-company__wrapper {
   max-width: 1220px;
-  display: flex;
-  gap: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, auto));
+  grid-template-rows: auto;
+  gap: 0 43px;
   margin: 0 auto;
 
   @include vp-1439 {
@@ -50,18 +52,22 @@
   @include vp-767 {
     width: 100%;
     gap: 0 15px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .about-company__content {
   display: block;
+  grid-column: 2;
   order: 2;
 }
 
 .about-company__picture {
   min-width: 150px;
   max-height: 320px;
-  margin: 0;
+  grid-column: 1;
+  margin: 0 56px 0 1px;
   order: 1;
 }
 

@@ -3,6 +3,11 @@ import {initPhoneMask} from './phone-mask.js';
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {initScroll} from './init-scroll';
+import {scrollMenu} from './scroll-menu.js';
+import {showButtonText} from './about-company';
+import {showContactButton} from './social-contact.js';
+import {initPhoneInput} from './modules/form-validate/init-phone-input.js';
 
 // ---------------------------------
 
@@ -22,10 +27,21 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initAccordions();
     initPhoneMask();
+    initPhoneInput();
+    initScroll();
+    scrollMenu();
+    showButtonText();
+    showContactButton();
     const form = new Form();
     window.form = form;
+    window.form.validateForm(form);
+    window.form.initPhoneInput(parent);
+    window.form.validateFormElement('input', true);
+    /* window.form.initPhoneInput(parent); */
+    /* window.form.validateFormElement(items, true); */
     form.init();
   });
+
 });
 
 // ---------------------------------

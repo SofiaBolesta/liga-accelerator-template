@@ -21,22 +21,24 @@
     padding: 0;
     margin: 0 auto;
     grid-template-columns: 216px auto;
-    grid-template-rows: repeat(auto-fit, minmax(auto, 100px));
+    grid-template-rows: repeat(auto-fit, minmax(100px, auto));
     gap: 0 39vw;
   }
 
   @include vp-767 {
     width: 100%;
-    padding: 0 25px;
+    padding: 0 25px 10px;
     box-sizing: border-box;
     margin: 0 auto;
     gap: 29vw;
     grid-template-columns: auto auto;
-    grid-template-rows: repeat(auto-fit, minmax(auto, 70px));
+    grid-template-rows: repeat(auto-fit, minmax(70px, auto));
   }
 }
 
 .header__button {
+  max-width: 219px;
+  cursor: pointer;
   justify-self: start;
   height: min-content;
   min-width: 40%;

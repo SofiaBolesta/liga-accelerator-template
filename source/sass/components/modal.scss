@@ -48,7 +48,7 @@
     position: absolute;
     top: 0;
     left: 0;
-
+    background-color: #08000000;
     width: 100%;
     height: 100%;
 
@@ -210,6 +210,7 @@
 }
 
 .modal__label--checkbox {
+  cursor: pointer;
   display: flex;
   align-items: center;
   margin: -1px 0 0 29px;
@@ -264,6 +265,7 @@
 }
 
 .modal__button {
+  cursor: pointer;
   width: 100%;
   padding: 15px 25px 15px 25px;
   margin-top: -9px;

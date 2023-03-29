@@ -1,4 +1,4 @@
-import {getLimitationsRegEx, getMatrixLimitationsRegEx, getMailRegEx} from './regular-expression';
+import {getLimitationsRegEx, getMailRegEx, getMatrixLimitationsRegEx} from './regular-expression';
 import {matrixReplace} from './matrix';
 import {Message} from './render-message';
 
@@ -292,7 +292,6 @@ export class Validator {
 
   validateForm(form) {
     const validateItems = form.querySelectorAll('[data-validate-type]');
-    const result = this._fullValidate(validateItems);
-    return result;
+    return this._fullValidate(validateItems);
   }
 }

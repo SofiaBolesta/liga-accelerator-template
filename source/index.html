@@ -12,7 +12,7 @@
 </head>
 <body class="page">
 <div class="wrapper">
-  <header class="page__header">
+  <header class="page__header js-header">
     <div class="container header">
       <div class="header__wrapper">
         <a class="logo" href="#">
@@ -57,10 +57,10 @@
       <div class="container promo__wrapper">
         <h2 class="promo__title">Печатные платы</h2>
         <p class="promo__text">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-        <a class="button promo__button" href="#">
+        <button type="button" class="button promo__button"><!-- href="#"-->
           <span class="promo__text-button promo__text-button--hidden-mobile">Получить бесплатную консультацию</span>
           <span class="promo__text-button promo__text-button--hidden-tablet">бесплатная консультация</span>
-        </a>
+        </button>
       </div>
       <picture class="promo__shadow">
         <source type="image/webp" media="(max-width: 766px)" srcset="img/main/promo/background-image_mobile@1x.webp, img/main/promo/background-image_mobile@2x.webp 2x">
@@ -75,9 +75,9 @@
       <div class="advantages__wrapper">
         <h2 class="visually-hidden">Преимущества:</h2>
         <ul class="advantages__list">
-          <li class="advantages__item advantages__item--current">
-            <h3 class="advantages__title advantages__title--current">Оперативные сроки</h3>
-              <svg class="advantages__icon advantages__icon--current advantages__icon--mobile" aria-hidden="true" focusable="false" width="35" height="35">
+          <li class="advantages__item">
+            <h3 class="advantages__title">Оперативные сроки</h3>
+              <svg class="advantages__icon advantages__icon--mobile" aria-hidden="true" focusable="false" width="35" height="35">
                 <use xlink:href="img/sprite/sprite.svg#icon-stopwatch"></use>
               </svg>
             <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
@@ -118,8 +118,17 @@
             Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
             Среди наших клиентов крупнейшие Производители светотехники России.</p>
-          <div class="content__button">
-            <a href="#">Подробнее</a>
+          <div data-accordion="parent" class="content__accord">
+            <div data-accordion="element" class="content__element-accord">
+              <button data-accordion="button" type="button" class="content__button">
+                <span class="content__text-button content__text-button-open">Подробнее</span>
+                <span class="content__text-button content__text-button-close content__text-button-close--hidden">Свернуть</span>
+              </button>
+              <div data-accordion="content" class="content__text-accord">
+                <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
+                  Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
+              </div>
+            </div>
           </div>
         </div>
         <picture class="about-company__picture about-company__picture--hidden-mobile">
@@ -184,32 +193,36 @@
         </ul>
       </div>
     </section>
-    <section class="form">
-      <div class="form__wrapper">
-        <div class="form__container">
-          <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
-          <p class="form__subtitle">Мы проконсультируем Вас бесплатно</p>
-          <form class="form__question" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="form__label form__label--name">
-              <input type="text" name="name" placeholder="Имя" required>
-            </label>
-            <label class="form__label form__label--tel">
-              <input type="tel" class="phone-mask" name="phone" placeholder="Телефон" required>
-            </label>
-            <textarea placeholder="Ваш вопрос" name="message" required></textarea>
-            <label class="form__label form__label--checkbox">
-              <input class="visually-hidden" type="checkbox" name="agree" required>
-              <span class="form__style"></span>
-              <span class="form__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-            </label>
-            <div class="form__container-button">
-              <button type="submit" class="button form__button">Задать вопрос</button>
-            </div>
-          </form>
+    <section class="forms">
+      <div class="forms__wrapper">
+        <div class="forms__container">
+          <h2 class="forms__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="forms__subtitle">Мы проконсультируем Вас бесплатно</p>
+          <div class="component-demo__form" data-form-validate data-callback="base">
+            <form class="forms__question form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="forms__label forms__label--name">
+                <input type="text" name="name" placeholder="Имя" required autofocus>
+              </label>
+              <div class="forms__label forms__label--tel custom-input" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required data-phone-length="18">
+                <label>
+                  <input type="tel" name="user-phone" placeholder="Телефон" class="" aria-invalid="true">
+                </label>
+              </div>
+              <textarea placeholder="Ваш вопрос" name="message" required></textarea>
+              <label class="forms__label forms__label--checkbox">
+                <input class="visually-hidden" type="checkbox" name="agree">
+                <span class="forms__style"></span>
+                <span class="forms__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+              </label>
+              <div class="forms__container-button">
+                <button type="submit" class="button forms__button">Задать вопрос</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <picture class="form__picture form__picture--hidden-tablet">
+        <picture class="forms__picture forms__picture--hidden-tablet">
           <source type="image/webp" srcset="img/main/form/paper_airplane_desktop@1x.webp, img/main/form/paper_airplane_desktop@2x.webp 2x">
-          <img class="form__pic" src="img/main/form/paper_airplane_desktop@1x.png" srcset="img/main/form/paper_airplane_desktop@2x.png 2x" width="510" height="285" alt="Изображение бумажного самолёта">
+          <img class="forms__pic" src="img/main/form/paper_airplane_desktop@1x.png" srcset="img/main/form/paper_airplane_desktop@2x.png 2x" width="510" height="285" alt="Изображение бумажного самолёта">
         </picture>
       </div>
     </section>
@@ -310,7 +323,7 @@
           </div>
         </dl>
       </div>
-      <div data-accordion="parent" class="social__contact-tablet-hidden">
+      <div data-accordion="parent" class="social__contact-tablet-hidden" data-single>
         <div data-accordion="element" class="social__contact-wrapper">
           <button data-accordion="button" class="social__contact-button">
             Разделы сайта
@@ -351,15 +364,15 @@
           </div>
         </div>
 
-        <div data-accordion="element" class="social__contact-wrapper is-active">
+        <div data-accordion="element" class="social__contact-wrapper">
           <button data-accordion="button" class="social__contact-button">
-            <!--Чтобы изменить на иконку открытия надо убрать класс contact__icon--open-hidden-->
             Наш офис
-            <svg class="social__contact-icon social__contact-icon--open social__contact-icon--open-hidden" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none">
-              <path fill="#F8FDFF" fill-rule="evenodd" d="M7.97 7.03V0h-.94v7.03H0v.94h7.03V15h.94V7.97H15v-.94H7.97Z" clip-rule="evenodd"/>
+            <!--Чтобы изменить на иконку открытия надо убрать класс social__contact-icon--open-hidden-->
+            <svg class="social__contact-icon social__contact-icon--open" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+              <path fill-rule="evenodd" d="M7.97 7.03V0h-.94v7.03H0v.94h7.03V15h.94V7.97H15v-.94H7.97Z" clip-rule="evenodd"/>
             </svg>
-            <!--Чтобы изменить на иконку закрытия надо добавить класс contact__icon--close-hidden-->
-            <svg class="social__contact-icon social__contact-icon--close" xmlns="http://www.w3.org/2000/svg" width="15" height="1">
+            <!--Чтобы изменить на иконку закрытия надо добавить класс social__contact-icon--close-hidden-->
+            <svg class="social__contact-icon social__contact-icon--close social__contact-icon--close-hidden" xmlns="http://www.w3.org/2000/svg" width="15" height="1">
               <path d="M0 0h15v1H0V0Z"/>
             </svg>
           </button>
@@ -390,14 +403,14 @@
       </button>
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="modal__label modal__label--name">
-          <input type="text"  name="name" placeholder="Имя" required>
+          <input type="text"  name="name" placeholder="Имя" autofocus required>
         </label>
         <label class="modal__label modal__label--tel">
-          <input type="tel" class="phone-mask" name="phone" placeholder="Телефон" required>
+          <input type="tel" class="phone-mask custom-input" name="phone" placeholder="Телефон" required>
         </label>
         <textarea placeholder="Ваш вопрос" name="message" required></textarea>
         <label class="modal__label modal__label--checkbox">
-          <input class="visually-hidden modal__input-checkbox" type="checkbox" name="agree" required>
+          <input class="visually-hidden modal__input-checkbox" type="checkbox" name="agree">
           <span class="modal__style"></span>
           <span class="modal__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
         </label>
@@ -408,20 +421,6 @@
     </div>
   </div>
 </div>
-<div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-  <div class="modal__wrapper">
-    <div class="modal__overlay" data-close-modal></div>
-    <div class="modal__content">
-      <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-        <svg width="15" height="15">
-          <use xlink:href="img/sprite.svg#icon-close"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-
 <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
