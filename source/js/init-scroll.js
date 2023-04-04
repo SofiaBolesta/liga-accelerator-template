@@ -1,5 +1,5 @@
 const buttonScroll = document.querySelector('.promo__button');
-const blockFocusForm = document.querySelector('.form');
+const blockFocusForm = document.querySelector('.forms');
 
 const initScroll = () => {
   buttonScroll.addEventListener('click', function () {

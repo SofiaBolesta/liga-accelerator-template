@@ -356,3 +356,13 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff;
   -webkit-box-shadow: 0 0 0 40rem #019bdf inset;
 }
+
+.forms__error-empty,
+ .forms__error {
+   display: block;
+ }
+
+.forms__error-empty--hidden,
+.forms__error--hidden {
+  display: none;
+}

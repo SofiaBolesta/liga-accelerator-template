@@ -697,8 +697,7 @@ button,
 }
 
 .header__button:hover,
-.header__button:focus,
-.header__button:active {
+.header__button:focus {
   -webkit-box-shadow: inset 0 0 5px 0 #f2f5f7;
   box-shadow: inset 0 0 5px 0 #f2f5f7;
 }
@@ -730,7 +729,7 @@ button,
   display: grid;
   -ms-grid-columns: (auto)[2];
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(auto-fit, minmax(50px, auto));
+  grid-template-rows: repeat(auto-fit, minmax(30px, auto));
   padding: 40px 0;
 }
 
@@ -743,6 +742,7 @@ button,
   justify-content: flex-end;
   padding: 3px 0 0 0;
   margin: 0;
+  height: 31px;
 }
 
 .contacts__item--email {
@@ -835,6 +835,11 @@ button,
 }
 
 .promo__button {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: inline-block;
   min-width: 410px;
   padding: 15px 25px;
@@ -1546,6 +1551,16 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 40rem #019bdf inset;
 }
 
+.forms__error-empty,
+.forms__error {
+  display: block;
+}
+
+.forms__error-empty--hidden,
+.forms__error--hidden {
+  display: none;
+}
+
 .social {
   width: 100%;
   max-width: 1220px;
@@ -1619,7 +1634,8 @@ input:-webkit-autofill:focus {
   display: none;
 }
 
-.social__contact-wrapper {
+.social__contact-wrapper,
+.social__contact-wrapper-two {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
@@ -1650,7 +1666,8 @@ input:-webkit-autofill:focus {
   grid-column: 1;
 }
 
-.social__contact-button {
+.social__contact-button,
+.social__contact-button-two {
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
@@ -1678,29 +1695,33 @@ input:-webkit-autofill:focus {
   text-align: start;
 }
 
-.social__contact-icon {
+.social__contact-icon,
+.social__contact-icon-two {
   fill: #f8fdff;
 }
 
-.social__contact-icon--close {
+.social__contact-icon--close,
+.social__contact-icon-two--close {
   position: absolute;
-  top: 11px;
+  top: 7px;
   right: 5px;
 }
 
-.social__contact-icon--open {
+.social__contact-icon--open,
+.social__contact-icon-two--open {
   position: absolute;
   top: -3px;
   right: 5px;
 }
 
 .social__contact-icon--open-hidden,
-.social__contact-icon--close-hidden {
+.social__contact-icon-two--open-hidden,
+.social__contact-icon--close-hidden,
+.social__contact-icon-two--close-hidden {
   display: none;
 }
 
 .social__contact-content {
-  min-height: 165px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1926,7 +1947,7 @@ input:-webkit-autofill:focus {
   place-items: center;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -3065,7 +3086,7 @@ input:-webkit-autofill:focus {
     display: grid;
     -ms-grid-columns: 215px auto auto;
     grid-template-columns: 215px auto auto;
-    grid-template-rows: repeat(auto-fit, minmax(auto, 280px));
+    grid-template-rows: repeat(auto-fit, minmax(280px, auto));
     gap: 0 1vw;
     width: 100%;
     padding: 0 100px;
@@ -3427,8 +3448,8 @@ input:-webkit-autofill:focus {
   }
 
   .contacts__list {
-    -ms-grid-columns: (minmax(0, 12vw))[2];
-    grid-template-columns: repeat(2, minmax(0, 12vw));
+    -ms-grid-columns: (minmax(10px, 59px))[2];
+    grid-template-columns: repeat(2, minmax(10px, 59px));
     grid-template-rows: repeat(auto-fit, minmax(5vw, auto));
     padding: 10px 0 0 0;
     margin: 0;

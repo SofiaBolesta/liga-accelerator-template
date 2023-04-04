@@ -226,6 +226,82 @@
         </picture>
       </div>
     </section>
+    <!--<section class="forms">
+      <div class="forms__wrapper">
+        <div class="forms__container">
+          <h2 class="forms__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="forms__subtitle">Мы проконсультируем Вас бесплатно</p>
+          <div data-form-validate="data-form-validate" data-callback="baseSuccessCallback">class="component-demo__form"
+            <form class="forms__question form js-form" action="https://echo.htmlacademy.ru/" method="post" novalidate>
+              <div class="forms__label forms__label&#45;&#45;name">
+                <label data-on-input-validate>&lt;!&ndash;class=""&ndash;&gt;&lt;!&ndash;   data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required="data-required"&ndash;&gt;
+                  <input type="text" name="name" placeholder="Имя" minlength="2" autofocus required data-validate-type="text">
+                </label>
+              </div>
+              <div class="forms__label forms__label&#45;&#45;tel custom-input input-message">&lt;!&ndash;data-validate-type="phone"&ndash;&gt;
+                <label data-on-input-validate data-validate-type="phone" data-required>
+                  <input class="input" type="tel" name="user-phone" placeholder="Телефон" aria-invalid="true">
+                </label>
+              </div>
+              <div class="forms__label forms__label&#45;&#45;tel custom-input" >
+                <label>
+                  <div data-on-input-validate data-validate-type="phone" data-required>
+                    <input type="tel" name="user-phone" placeholder="Телефон" class="" aria-invalid="true">
+                  </div>
+                </label>
+              </div>
+              <div class="forms__label forms__label&#45;&#45;tel custom-input" data-validate-type="phone" data-required>
+                <label data-on-input-validate >
+                  <input type="tel" name="user-phone" placeholder="Телефон" class="" aria-invalid="true">
+                </label>
+              </div>
+              <textarea placeholder="Ваш вопрос" name="message"></textarea>
+              <label class="forms__label forms__label&#45;&#45;checkbox">
+                <input class="visually-hidden" type="checkbox" name="agree">
+                <span class="forms__style"></span>
+                <span class="forms__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+              </label>
+              <div class="forms__container-button">
+                <button type="submit" class="button forms__button">Задать вопрос</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>-->
+    <!--<section class="forms">
+      <div class="forms__wrapper">
+        <div class="forms__container">
+          <h2 class="forms__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="forms__subtitle">Мы проконсультируем Вас бесплатно</p>
+          <div class="component-demo__form" data-form-validate data-callback="base">
+            <form class="forms__question form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="forms__label forms__label&#45;&#45;name">
+                <input type="text" name="name" placeholder="Имя" required autofocus>
+              </label>
+              <div class="forms__label forms__label&#45;&#45;tel custom-input" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required data-phone-length="18">
+                <label>
+                  <input type="tel" name="user-phone" placeholder="Телефон" class="" aria-invalid="true">
+                </label>
+              </div>
+              <textarea placeholder="Ваш вопрос" name="message" required></textarea>
+              <label class="forms__label forms__label&#45;&#45;checkbox">
+                <input class="visually-hidden" type="checkbox" name="agree">
+                <span class="forms__style"></span>
+                <span class="forms__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+              </label>
+              <div class="forms__container-button">
+                <button type="submit" class="button forms__button">Задать вопрос</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <picture class="forms__picture forms__picture&#45;&#45;hidden-tablet">
+          <source type="image/webp" srcset="img/main/form/paper_airplane_desktop@1x.webp, img/main/form/paper_airplane_desktop@2x.webp 2x">
+          <img class="forms__pic" src="img/main/form/paper_airplane_desktop@1x.png" srcset="img/main/form/paper_airplane_desktop@2x.png 2x" width="510" height="285" alt="Изображение бумажного самолёта">
+        </picture>
+      </div>
+    </section>-->
   </main>
   <footer class="page__footer">
     <div class="container social">
@@ -364,15 +440,13 @@
           </div>
         </div>
 
-        <div data-accordion="element" class="social__contact-wrapper">
-          <button data-accordion="button" class="social__contact-button">
+        <div data-accordion="element" class="social__contact-wrapper-two">
+          <button data-accordion="button" class="social__contact-button-two">
             Наш офис
-            <!--Чтобы изменить на иконку открытия надо убрать класс social__contact-icon--open-hidden-->
-            <svg class="social__contact-icon social__contact-icon--open" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+            <svg class="social__contact-icon-two social__contact-icon-two--open" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
               <path fill-rule="evenodd" d="M7.97 7.03V0h-.94v7.03H0v.94h7.03V15h.94V7.97H15v-.94H7.97Z" clip-rule="evenodd"/>
             </svg>
-            <!--Чтобы изменить на иконку закрытия надо добавить класс social__contact-icon--close-hidden-->
-            <svg class="social__contact-icon social__contact-icon--close social__contact-icon--close-hidden" xmlns="http://www.w3.org/2000/svg" width="15" height="1">
+            <svg class="social__contact-icon-two social__contact-icon-two--close social__contact-icon-two--close-hidden" xmlns="http://www.w3.org/2000/svg" width="15" height="1">
               <path d="M0 0h15v1H0V0Z"/>
             </svg>
           </button>
@@ -403,7 +477,7 @@
       </button>
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="modal__label modal__label--name">
-          <input type="text"  name="name" placeholder="Имя" autofocus required>
+          <input type="text"  name="name" placeholder="Имя" required>
         </label>
         <label class="modal__label modal__label--tel">
           <input type="tel" class="phone-mask custom-input" name="phone" placeholder="Телефон" required>
@@ -423,5 +497,6 @@
 </div>
 <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>
+<script src="js/forms.js"></script>
 </body>
 </html>
