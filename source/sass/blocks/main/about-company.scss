@@ -16,7 +16,7 @@
   }
 
   @include vp-1023 {
-    padding: 31px 47px 79px;
+    padding: 37px 44px 81px;
     margin: 0;
   }
 
@@ -46,6 +46,7 @@
 
   @include vp-1023 {
     width: 100%;
+    grid-template-columns: 154px auto;
     gap: 0 27px;
   }
 

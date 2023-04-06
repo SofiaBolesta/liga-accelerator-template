@@ -24,7 +24,7 @@
 
 .menu__list {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2,minmax(auto, 128px));
   grid-template-rows: repeat(auto-fit, minmax(18px, auto));
   gap: 5px 30px;
   padding: 0;

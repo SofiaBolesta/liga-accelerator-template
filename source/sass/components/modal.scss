@@ -225,7 +225,7 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 2px;
   box-sizing: border-box;
   margin: 0 0 0 -20px;
@@ -235,18 +235,18 @@
   content: "";
   position: absolute;
   top: 3px;
-  left: 1px;
+  left: 2px;
   width: 10px;
   height: 10px;
   background: url("../img/svg/check_mark.svg") no-repeat;
 }
 
 .modal__input-checkbox:hover + .modal__style {
-  border: 2px solid rgba(#000000, 0.5);
+  border: 1px solid rgba(#000000, 0.5);
 }
 
 .modal__input-checkbox:focus + .modal__style {
-  border: 2px solid rgba(#000000, 0.8);
+  border: 1px solid rgba(#000000, 0.8);
 }
 
 .modal__text {

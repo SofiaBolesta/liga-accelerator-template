@@ -26,7 +26,7 @@
     grid-template-rows: repeat(auto-fit, minmax(5vw, auto));
     padding: 10px 0 0 0;
     margin: 0;
-    justify-content: end;
+    justify-content: space-around;
     gap: 0;
   }
 }
@@ -44,8 +44,8 @@
 }
 
 .contacts__item--email {
-  justify-content: center;
-  margin: 0 36px 0 0;
+  justify-content: end;
+  margin: 0 58px 0 0;
 
   @include vp-1279 {
     margin: 0 12px 0 0;
@@ -68,7 +68,7 @@
 
 .contacts__parameter {
   display: flex;
-  margin: 3px 16px 0 0;
+  margin: 3px 15px 0 0;
 
   &:hover,
   &:focus,
@@ -108,11 +108,11 @@
   color: #f2f5f7;
 
   @include vp-1439 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   @include vp-1279 {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 

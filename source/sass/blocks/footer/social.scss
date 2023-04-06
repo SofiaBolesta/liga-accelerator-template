@@ -65,8 +65,8 @@
 
   @include vp-1023 {
     align-items: center;
-    padding-top: 22px;
-    margin: 0 5px 0 5px;
+    padding-top: 16px;
+    margin: 0 -5px;
   }
 }
 
@@ -99,7 +99,7 @@
 
 .social__logo-footer-link {
   display: block;
-  margin: 30px 0 35px 0;
+  margin: 30px 0;
   box-sizing: border-box;
 
   &:hover {

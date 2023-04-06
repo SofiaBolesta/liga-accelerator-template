@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: 515px 585px;
   grid-template-rows: repeat(auto-fit, minmax(303px, auto));
-  gap: 0 115px;
+  gap: 0 111px;
 
   @include vp-1279 {
     width: 100%;
@@ -33,13 +33,13 @@
   @include vp-1023 {
     display: block;
     width: 100%;
-    padding: 35px 50px 137px 50px;
+    padding: 35px 50px 153px 50px;
     box-sizing: border-box;
   }
 
   @include vp-767 {
     width: 100%;
-    padding: 35px 25px 95px 25px;
+    padding: 35px 25px 94px 25px;
     box-sizing: border-box;
   }
 }
@@ -106,11 +106,11 @@
 
 .forms__question {
   width: 100%;
-  max-width: 543px;
+  max-width: 550px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
-  gap: 20px 31px;
+  gap: 20px 28px;
   margin-left: 4px;
 
   @include vp-1279 {
@@ -122,15 +122,17 @@
   }
 
   @include vp-1023 {
-    max-width: 100%;
+    width: 100%;
+    max-width: 640px;
     grid-template-columns: 50% 50%;
-    gap: 20px 30px;
+    gap: 0 30px;
     margin: 0;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -235,10 +237,10 @@
   grid-row: 3;
   display: flex;
   align-items: center;
-  margin: 28px 0 0 29px;
+  margin: 28px 0 0 32px;
 
   @include vp-1023 {
-    margin: 28px 0 0 20px;
+    margin: 57px 0 0 21px;
   }
 
   @include vp-767 {
@@ -304,7 +306,7 @@
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 28px 56px 0 0;
+    margin: 56px 0 0 0;
   }
 
   @include vp-767 {

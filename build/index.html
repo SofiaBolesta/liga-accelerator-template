@@ -112,8 +112,8 @@
           <h2>О компании</h2>
           <p>Мы&nbsp;поставляем электронные комплектующие,
             производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года.
-            Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
-            Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.</p>
+            Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
+          <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.</p>
           <p class="content__text content__text--hidden-mobile">
             Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД),
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
@@ -200,17 +200,15 @@
           <p class="forms__subtitle">Мы проконсультируем Вас бесплатно</p>
           <div class="component-demo__form" data-form-validate data-callback="base">
             <form class="forms__question form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="forms__label forms__label--name">
-                <input type="text" name="name" placeholder="Имя" required autofocus>
+              <label class="forms__label forms__label--name" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                <input class="input" type="text" name="name" placeholder="Имя" required>
               </label>
-              <div class="forms__label forms__label--tel custom-input" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required data-phone-length="18">
-                <label>
-                  <input type="tel" name="user-phone" placeholder="Телефон" class="" aria-invalid="true">
-                </label>
-              </div>
-              <textarea placeholder="Ваш вопрос" name="message" required></textarea>
-              <label class="forms__label forms__label--checkbox">
-                <input class="visually-hidden" type="checkbox" name="agree">
+              <label class="forms__label forms__label--tel" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-phone-length="18" data-required>
+                <input class="input" type="tel" name="user-phone" placeholder="Телефон">
+              </label>
+              <textarea placeholder="Ваш вопрос" name="message"></textarea>
+              <label class="forms__label forms__label--checkbox" data-validate-type="checkbox" data-required>
+                <input class="visually-hidden input" type="checkbox" name="agree" required>
                 <span class="forms__style"></span>
                 <span class="forms__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
               </label>
@@ -226,82 +224,6 @@
         </picture>
       </div>
     </section>
-    <!--<section class="forms">
-      <div class="forms__wrapper">
-        <div class="forms__container">
-          <h2 class="forms__title">Остались вопросы? Задайте их нам!</h2>
-          <p class="forms__subtitle">Мы проконсультируем Вас бесплатно</p>
-          <div data-form-validate="data-form-validate" data-callback="baseSuccessCallback">class="component-demo__form"
-            <form class="forms__question form js-form" action="https://echo.htmlacademy.ru/" method="post" novalidate>
-              <div class="forms__label forms__label&#45;&#45;name">
-                <label data-on-input-validate>&lt;!&ndash;class=""&ndash;&gt;&lt;!&ndash;   data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required="data-required"&ndash;&gt;
-                  <input type="text" name="name" placeholder="Имя" minlength="2" autofocus required data-validate-type="text">
-                </label>
-              </div>
-              <div class="forms__label forms__label&#45;&#45;tel custom-input input-message">&lt;!&ndash;data-validate-type="phone"&ndash;&gt;
-                <label data-on-input-validate data-validate-type="phone" data-required>
-                  <input class="input" type="tel" name="user-phone" placeholder="Телефон" aria-invalid="true">
-                </label>
-              </div>
-              <div class="forms__label forms__label&#45;&#45;tel custom-input" >
-                <label>
-                  <div data-on-input-validate data-validate-type="phone" data-required>
-                    <input type="tel" name="user-phone" placeholder="Телефон" class="" aria-invalid="true">
-                  </div>
-                </label>
-              </div>
-              <div class="forms__label forms__label&#45;&#45;tel custom-input" data-validate-type="phone" data-required>
-                <label data-on-input-validate >
-                  <input type="tel" name="user-phone" placeholder="Телефон" class="" aria-invalid="true">
-                </label>
-              </div>
-              <textarea placeholder="Ваш вопрос" name="message"></textarea>
-              <label class="forms__label forms__label&#45;&#45;checkbox">
-                <input class="visually-hidden" type="checkbox" name="agree">
-                <span class="forms__style"></span>
-                <span class="forms__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-              </label>
-              <div class="forms__container-button">
-                <button type="submit" class="button forms__button">Задать вопрос</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>-->
-    <!--<section class="forms">
-      <div class="forms__wrapper">
-        <div class="forms__container">
-          <h2 class="forms__title">Остались вопросы? Задайте их нам!</h2>
-          <p class="forms__subtitle">Мы проконсультируем Вас бесплатно</p>
-          <div class="component-demo__form" data-form-validate data-callback="base">
-            <form class="forms__question form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="forms__label forms__label&#45;&#45;name">
-                <input type="text" name="name" placeholder="Имя" required autofocus>
-              </label>
-              <div class="forms__label forms__label&#45;&#45;tel custom-input" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required data-phone-length="18">
-                <label>
-                  <input type="tel" name="user-phone" placeholder="Телефон" class="" aria-invalid="true">
-                </label>
-              </div>
-              <textarea placeholder="Ваш вопрос" name="message" required></textarea>
-              <label class="forms__label forms__label&#45;&#45;checkbox">
-                <input class="visually-hidden" type="checkbox" name="agree">
-                <span class="forms__style"></span>
-                <span class="forms__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-              </label>
-              <div class="forms__container-button">
-                <button type="submit" class="button forms__button">Задать вопрос</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <picture class="forms__picture forms__picture&#45;&#45;hidden-tablet">
-          <source type="image/webp" srcset="img/main/form/paper_airplane_desktop@1x.webp, img/main/form/paper_airplane_desktop@2x.webp 2x">
-          <img class="forms__pic" src="img/main/form/paper_airplane_desktop@1x.png" srcset="img/main/form/paper_airplane_desktop@2x.png 2x" width="510" height="285" alt="Изображение бумажного самолёта">
-        </picture>
-      </div>
-    </section>-->
   </main>
   <footer class="page__footer">
     <div class="container social">
@@ -475,28 +397,29 @@
           <path fill-rule="evenodd" d="M.18 1.03a.6.6 0 0 1 .85-.85L10 9.15 18.97.18a.6.6 0 0 1 .85.85L10.85 10l8.97 8.97a.6.6 0 1 1-.85.85L10 10.85l-8.97 8.97a.6.6 0 1 1-.85-.85L9.15 10 .18 1.03Z" clip-rule="evenodd"/>
         </svg>
       </button>
-      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="modal__label modal__label--name">
-          <input type="text"  name="name" placeholder="Имя" required>
-        </label>
-        <label class="modal__label modal__label--tel">
-          <input type="tel" class="phone-mask custom-input" name="phone" placeholder="Телефон" required>
-        </label>
-        <textarea placeholder="Ваш вопрос" name="message" required></textarea>
-        <label class="modal__label modal__label--checkbox">
-          <input class="visually-hidden modal__input-checkbox" type="checkbox" name="agree">
-          <span class="modal__style"></span>
-          <span class="modal__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-        </label>
-        <div class="modal__container-button">
-          <button type="submit" class="button modal__button">Отправить</button>
-        </div>
-      </form>
+      <div class="component-demo__form" data-form-validate data-callback="base">
+        <form class="modal__form form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="modal__label modal__label--tel" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required data-focus>
+            <input id="autofocus-element" class="input" type="text" name="name" placeholder="Имя" required>
+          </label>
+          <label class="modal__label modal__label--tel" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-phone-length="18" data-required><!-- class="forms__label input"-->
+            <input class="input" type="tel" name="user-phone" placeholder="Телефон">
+          </label>
+          <textarea placeholder="Ваш вопрос" name="message"></textarea>
+          <label class="modal__label modal__label--checkbox" data-required>
+            <input class="visually-hidden modal__input-checkbox" type="checkbox" name="agree" required>
+            <span class="modal__style"></span>
+            <span class="modal__text">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+          </label>
+          <div class="modal__container-button">
+            <button type="submit" class="button modal__button">Задать вопрос</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
 <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>
-<script src="js/forms.js"></script>
 </body>
 </html>
