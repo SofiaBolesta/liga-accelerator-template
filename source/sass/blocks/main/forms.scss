@@ -289,6 +289,7 @@
   color: #ffffff;
   opacity: 0.8;
   margin: 0 0 0 6px;
+  user-select: none;
 
   @include vp-1023 {
     margin: 5px 0 0 4px;

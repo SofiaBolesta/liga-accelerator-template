@@ -15,10 +15,11 @@
 
   @include vp-1023 {
     grid-template-rows: repeat(auto-fit, minmax(5vw, auto));
-    grid-template-columns: repeat(2, minmax(0, 5vw));
+    grid-template-columns: repeat(2, minmax(10px, 59px));
     padding: 16px 0 0 0;
-    margin: 0 0 0 17px;
-    justify-content: space-evenly;
+    margin: 0 0 0 0;
+    gap: 0;
+    justify-content: center;
   }
 
   @include vp-767 {
@@ -26,8 +27,8 @@
     grid-template-rows: repeat(auto-fit, minmax(5vw, auto));
     padding: 10px 0 0 0;
     margin: 0;
-    justify-content: space-around;
-    gap: 0;
+    justify-content: center;
+    gap: 5px;
   }
 }
 

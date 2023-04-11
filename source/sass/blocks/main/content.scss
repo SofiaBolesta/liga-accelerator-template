@@ -68,6 +68,8 @@
 }
 
 .content__text-button {
+  cursor: pointer;
+  user-select: none;
   display: block;
   min-width: 70px;
   grid-column: 2;

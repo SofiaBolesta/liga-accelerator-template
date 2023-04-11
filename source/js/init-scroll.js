@@ -3,7 +3,6 @@ const blockFocusForm = document.querySelector('.forms');
 
 const initScroll = () => {
   buttonScroll.addEventListener('click', function () {
-    blockFocusForm.scrollIntoView();
     blockFocusForm.scrollIntoView({behavior: 'smooth'});
   });
 };
